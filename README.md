@@ -8,6 +8,8 @@ A lightweight, command-style router for agentic software development. It selects
 
 Each command inspects the request and project context. For example, `/review Fix the checkout error` may use only a general review skill, while `/review Audit this new public payments API` can additionally select a security specialist.
 
+The workflow is a router, not a set of aliases. `/architect` starts with architecture expertise and adds API/interface design when the decision affects a contract. `/spec` can choose ambiguity, idea, constraint, interface, UI, architecture, or security expertise only when the request signals that need. The same routing behavior applies when no command is supplied: the router infers the appropriate stage from the request.
+
 ## Examples
 
 ```text
@@ -52,4 +54,4 @@ Validate the package with the Codex skill validator:
 python3 /path/to/skill-creator/scripts/quick_validate.py .
 ```
 
-The routing table in [references/routing.md](references/routing.md) intentionally contains names and selection cues only, not copied specialist content.
+Each command has a focused routing reference under [`references/`](references/). They intentionally contain names and selection cues only, not copied specialist content.
