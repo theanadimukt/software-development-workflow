@@ -25,14 +25,22 @@ Each command inspects the request and project context. For example, `/review Fix
 
 ## Install
 
-Clone the repository into a persistent location, then make it discoverable by Codex:
+Install globally for Codex with the Skills CLI:
+
+```bash
+npx skills add theanadimukt/software-development-workflow -g -a codex -y
+```
+
+Restart the agent session after installation if the skill catalog does not refresh automatically.
+
+To develop from a local checkout instead, clone the repository into a persistent location and make it discoverable by Codex:
 
 ```bash
 git clone <repo-url> ~/Projects/software-development-workflow
 ln -s ~/Projects/software-development-workflow ~/.codex/skills/software-development-workflow
 ```
 
-If `~/.codex/skills/software-development-workflow` already exists, remove or rename that link or directory before creating the link. Restart the agent session after installation if the skill catalog does not refresh automatically.
+If `~/.codex/skills/software-development-workflow` already exists, remove or rename that link or directory before creating the link.
 
 The router degrades gracefully when a candidate specialist is absent: it reports the missing capability, uses an available equivalent or a proportionate general workflow, and never claims that a missing skill ran.
 
