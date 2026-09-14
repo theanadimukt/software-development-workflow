@@ -168,7 +168,7 @@ shipping-and-launch
 
 ### Native macOS client
 
-The core workflow still applies: requirements, specification, modules, contracts, tests, security, CI/CD, observability, and release discipline. Add a dedicated Swift/macOS skill when the client is built with Swift or SwiftUI; the general-purpose skills are not a replacement for platform-specific expertise.
+The core workflow still applies: requirements, specification, modules, contracts, tests, security, CI/CD, observability, and release discipline. Use `write-swift` for Swift implementation, review, migrations, concurrency, and performance work when the client is built with Swift or SwiftUI; the general-purpose skills are not a replacement for platform-specific expertise.
 
 ### Chrome extension
 

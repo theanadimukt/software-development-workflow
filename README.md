@@ -10,6 +10,16 @@ Each command inspects the request and project context. For example, `/review Fix
 
 The workflow is a router, not a set of aliases. `/architect` starts with architecture expertise and adds API/interface design when the decision affects a contract. `/spec` can choose ambiguity, idea, constraint, interface, UI, architecture, or security expertise only when the request signals that need. The same routing behavior applies when no command is supplied: the router infers the appropriate stage from the request.
 
+## Additional Routing
+
+The router also covers interface, visual, motion, platform, and output-accessibility requests when the relevant skills are installed.
+
+- **User interfaces and visual work:** use `impeccable` as the broad craft default; select one focused skill for a redesign, a visual reference, an original web or mobile concept, a brand system, or a named aesthetic. Do not stack competing visual-direction skills.
+- **Motion and platforms:** route web motion to `animate`, React Native/Expo motion to `animate-expo`, Swift work to `write-swift`, and Sonner toast work to `ask-sonner`. Use review and opportunity-mapping skills only for their specific evaluation roles.
+- **Accessible output mode:** `/i-have-adhd` explicitly enables concise, stateful guidance with numbered next actions, visible progress, concrete time estimates, and fewer tangents. It is never enabled implicitly.
+
+The detailed selection rules and the skill sources are maintained in [`SKILL.md`](SKILL.md).
+
 ## Recommended Agent-Assisted SDLC
 
 For Laravel + React SaaS work, use Addy Osmani's skills as the primary engineering framework, supplemented by four Matt Pocock skills for requirements and architecture, plus Laravel's official skills for framework-specific conventions.
