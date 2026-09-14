@@ -10,6 +10,30 @@ Each command inspects the request and project context. For example, `/review Fix
 
 The workflow is a router, not a set of aliases. `/architect` starts with architecture expertise and adds API/interface design when the decision affects a contract. `/spec` can choose ambiguity, idea, constraint, interface, UI, architecture, or security expertise only when the request signals that need. The same routing behavior applies when no command is supplied: the router infers the appropriate stage from the request.
 
+## Recommended Agent-Assisted SDLC
+
+For Laravel + React SaaS work, use Addy Osmani's skills as the primary engineering framework, supplemented by four Matt Pocock skills for requirements and architecture, plus Laravel's official skills for framework-specific conventions.
+
+```text
+Idea → requirements → specification → constraints → architecture → plan
+     → incremental implementation → tests → review → CI/CD
+     → observability → release
+```
+
+The recommended default sequence is:
+
+1. `grill-with-docs` — clarify requirements and preserve decisions, ADRs, and domain language.
+2. `idea-refine` (optional), `spec-driven-development`, and `constraint-driven-development` — turn the idea into an implementable, bounded specification.
+3. `codebase-design` and `planning-and-task-breakdown` — design narrow modules and split work into verifiable slices.
+4. `incremental-implementation` — implement, test, verify, and commit each slice before the next.
+5. `frontend-ui-engineering` for React/UI work and `api-and-interface-design` for Laravel/API contracts.
+6. `test-driven-development`, `browser-testing-with-devtools`, `debugging-and-error-recovery`, and `code-review-and-quality` — validate behavior before merge.
+7. `security-and-hardening`, `performance-optimization`, `ci-cd-and-automation`, `observability-and-instrumentation`, and `shipping-and-launch` — prepare, operate, and release safely.
+
+The complementary Matt skills are `grill-with-docs`, `codebase-design`, `improve-codebase-architecture`, and `resolving-merge-conflicts`. Keep only one default skill for overlapping concerns such as TDD, to avoid ambiguous routing.
+
+See the full [agent-assisted SDLC reference](docs/agentic-sdlc-reference.md) for stack-specific checklists, requirements-interrogation prompts, architecture guidance, and release quality gates.
+
 ## Examples
 
 ```text
